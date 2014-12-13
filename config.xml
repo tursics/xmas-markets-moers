@@ -5,7 +5,7 @@
         version="1.0"
         versionCode="1">
 
-	<name>Weihnachtsmärkte in Moers</name>
+	<name>Weihnachten in Moers</name>
 	<description>Finde alle Weihnachtsmärkte in Moers: die großen, die kleinen, die bunten, die lebhaften, die besinnlichen und die Geheimtipps. Alle in einer App.</description>
 	<author href="http://www.tursics.de" email="thomas@tursics.de">Thomas Tursics</author>
 	<icon src="icon.png" />
