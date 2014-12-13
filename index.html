@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<title>Weihnachten in Moers</title>
+	<link rel="stylesheet" href="font/xmas-symbols.css">
+	<link rel="stylesheet" href="scripts/buttons.css">
+	<link rel="stylesheet" href="scripts/cross_browser.css" >
+	<link rel="stylesheet" href="scripts/drawer.css">
+	<link rel="stylesheet" href="scripts/headers.css">
+	<link rel="stylesheet" href="scripts/lists.css">
+	<link rel="stylesheet" href="scripts/progress_activity.css">
+	<!-- link rel="stylesheet" href="scripts/status.css" -->
+	<link rel="stylesheet" href="scripts/tabs.css">
+	<link rel="stylesheet" href="scripts/toolbars.css">
+	<link rel="stylesheet" href="scripts/transitions.css">
+	<link rel="stylesheet" href="scripts/util.css">
+	<link rel="stylesheet" href="scripts/index.css">
+</head>
+<body>
+
+<!--·································································-->
+
+<section id="index" data-position="current">
+	<section data-type="sidebar">
+		<header>
+			<menu type="toolbar">
+				<a href="#" style="font-size:2.5rem;"><i class="icon-cancel"></i></a>
+			</menu>
+			<h1>App-Info</h1>
+		</header>
+		<nav>
+			<h2>Diese App wurde erstellt von</h2>
+			<ul>
+				<li><a href="#">Thomas Tursics<br>@tursics</a></li>
+			</ul>
+			<h2>Das Icon stammt von</h2>
+			<ul>
+				<li><a href="#">Miriam Kadel</a></li>
+			</ul>
+			<h2>Die Liste der Märkte kommt von</h2>
+			<ul>
+				<li><a href="#">Veranstaltungen zur Weihnachtszeit<br>DL-DE-0 2.0<br>offenedaten.moers.de</a></li>
+			</ul>
+			<h2>Das Titelbild ist von</h2>
+			<ul>
+				<li><a href="#">Stadt Moers<br>"Henriette vor Moerser Schloss Winter"<br>BY-NC-ND 2.0</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="drawer" role="region">
+		<header class="fixed">
+			<a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+			<a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+			<h1>Weihnachten <em>in Moers</em></h1>
+		</header>
+		<header class="fixed">
+			<div id="markettab"><ul role="tablist" class="bb-tablist" data-type="filter">
+				<li role="presentation" style="width:32%"><a href="#" role="tab" id="tab-market-days">Aktuell</a></li>
+				<li role="presentation" style="width:32%"><a href="#" role="tab" id="tab-market-all">Alle</a></li>
+				<li role="presentation" style="width:32%"><a href="#" role="tab" id="tab-market-nearby"><i class="icon-direction"></i></a></li>
+			</ul></div>
+		</header>
+		<article class="content scrollable header">
+			<div id="marketlist">
+				<div class="center"><progress></progress></div>
+			</div>
+		</article>
+	</section>
+</section>
+
+<!--·································································-->
+
+<section role="region" id="onemarket" data-position="right">
+	<header class="fixed">
+		<a id="btn-onemarket-back" href="#"><span class="icon icon-back">back</span></a>
+		<h1>Weihnachtsmarkt</h1>
+	</header>
+	<article class="content scrollable header">
+		<p>Wählen Sie einen Weihnachtsmarkt von der linken Seite aus.</p>
+	</article>
+</section>
+
+<!--·································································-->
+
+<script type="text/javascript" defer src="data/data.js"></script>
+<script type="text/javascript" defer src="scripts/index.js"></script>
+
+</body>
+</html>
