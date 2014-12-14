@@ -273,14 +273,26 @@ function sortDataToday( a, b)
 	b.data_next_open = timeB;
 
 	if(( '' != timeA) && ('' != timeB)) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		var intA = parseInt( timeA.substr( 6, 2));
 		var intB = parseInt( timeB.substr( 6, 2));
+		if(( timeA.length < 6) || (timeB.length < 6)) {
+			intA = 0;
+			intB = 0;
+		}
 
 		if( intA != intB) {
 			return intB - intA;
 		} else {
 			intA = parseInt( timeA.substr( 9, 2));
 			intB = parseInt( timeB.substr( 9, 2));
+			if(( timeA.length < 6) || (timeB.length < 6)) {
+				intA = 0;
+				intB = 0;
+			}
 		}
 
 		if( intA != intB) {
@@ -353,14 +365,26 @@ function sortDataTomorrow( a, b)
 	b.data_next_open = timeB;
 
 	if(( '' != timeA) && ('' != timeB)) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		var intA = parseInt( timeA.substr( 6, 2));
 		var intB = parseInt( timeB.substr( 6, 2));
+		if(( timeA.length < 6) || (timeB.length < 6)) {
+			intA = 0;
+			intB = 0;
+		}
 
 		if( intA != intB) {
 			return intB - intA;
 		} else {
 			intA = parseInt( timeA.substr( 9, 2));
 			intB = parseInt( timeB.substr( 9, 2));
+			if(( timeA.length < 6) || (timeB.length < 6)) {
+				intA = 0;
+				intB = 0;
+			}
 		}
 
 		if( intA != intB) {
@@ -433,14 +457,26 @@ function sortDataOvermorrow( a, b)
 	b.data_next_open = timeB;
 
 	if(( '' != timeA) && ('' != timeB)) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		var intA = parseInt( timeA.substr( 6, 2));
 		var intB = parseInt( timeB.substr( 6, 2));
+		if(( timeA.length < 6) || (timeB.length < 6)) {
+			intA = 0;
+			intB = 0;
+		}
 
 		if( intA != intB) {
 			return intB - intA;
 		} else {
 			intA = parseInt( timeA.substr( 9, 2));
 			intB = parseInt( timeB.substr( 9, 2));
+			if(( timeA.length < 6) || (timeB.length < 6)) {
+				intA = 0;
+				intB = 0;
+			}
 		}
 
 		if( intA != intB) {
@@ -540,16 +576,28 @@ function sortDataAll( a, b)
 	b.data_next_open = daysB;
 
 	if( daysA == daysB) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		var timeA = getOpeningTime( a, daysA);
 		var timeB = getOpeningTime( b, daysB);
 		var intA = parseInt( timeA.substr( 6, 2));
 		var intB = parseInt( timeB.substr( 6, 2));
+		if(( timeA.length < 6) || (timeB.length < 6)) {
+			intA = 0;
+			intB = 0;
+		}
 
 		if( intA != intB) {
 			return intB - intA;
 		} else {
 			intA = parseInt( timeA.substr( 9, 2));
 			intB = parseInt( timeB.substr( 9, 2));
+			if(( timeA.length < 6) || (timeB.length < 6)) {
+				intA = 0;
+				intB = 0;
+			}
 		}
 
 		if( intA != intB) {
@@ -652,6 +700,10 @@ function sortDataNearby( a, b)
 	b.data_km = kmB;
 
 	if( kmA == kmB) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		return a.name < b.name ? 1 : -1;
 	}
 
@@ -733,16 +785,28 @@ function sortDataFavorite( a, b)
 	b.data_next_open = daysB;
 
 	if( daysA == daysB) {
+		if( a.group != b.group) {
+			return a.group > b.group ? 1 : -1;
+		}
+
 		var timeA = getOpeningTime( a, daysA);
 		var timeB = getOpeningTime( b, daysB);
 		var intA = parseInt( timeA.substr( 6, 2));
 		var intB = parseInt( timeB.substr( 6, 2));
+		if(( timeA.length < 6) || (timeB.length < 6)) {
+			intA = 0;
+			intB = 0;
+		}
 
 		if( intA != intB) {
 			return intB - intA;
 		} else {
 			intA = parseInt( timeA.substr( 9, 2));
 			intB = parseInt( timeB.substr( 9, 2));
+			if(( timeA.length < 6) || (timeB.length < 6)) {
+				intA = 0;
+				intB = 0;
+			}
 		}
 
 		if( intA != intB) {

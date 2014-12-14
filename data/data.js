@@ -4,7 +4,7 @@ var data = [
   {
     "id":2,
     "name":"Moerser Weihnachtsmarkt",
-    "market":"#",
+    "group":"!",
     "date":"24.11.2014 bis 23.12.2014",
     "hours":"Mo-Do 11:00-20:00 Uhr<br>Fr-So 11:00-21:00 Uhr",
     "20141124":"11:00-20:00",
@@ -69,7 +69,7 @@ var data = [
   {
     "id":4,
     "name":"Band CC Smokie",
-    "market":"x",
+    "group":"#",
     "date":"12.12.2014",
     "hours":"19:30-20:30 Uhr",
     "20141124":"",
@@ -134,7 +134,7 @@ var data = [
   {
     "id":6,
     "name":"Weihnachten nach Maß von Ed Vere - Bilderbuchkino und Basteln mit Ina Wilmsmann für Kinder ab 4 Jahren",
-    "market":"-",
+    "group":"-",
     "date":"13.12.2014",
     "hours":"11:30-13:00 Uhr",
     "20141124":"",
@@ -199,7 +199,7 @@ var data = [
   {
     "id":8,
     "name":"Fahrt zum Weihnachtsmarkt Schloß Dyck",
-    "market":"-",
+    "group":"-",
     "date":"13.12.2014",
     "hours":"14:00-19:00 Uhr",
     "20141124":"",
@@ -264,7 +264,7 @@ var data = [
   {
     "id":10,
     "name":"Unerhörtes Weihnachten",
-    "market":"-",
+    "group":"-",
     "date":"13.12.2014",
     "hours":"19:00 Uhr",
     "20141124":"",
@@ -329,7 +329,7 @@ var data = [
   {
     "id":12,
     "name":"Livin Sixties",
-    "market":"x",
+    "group":"#",
     "date":"13.12.2014",
     "hours":"19:30-21:00 Uhr",
     "20141124":"",
@@ -394,7 +394,7 @@ var data = [
   {
     "id":14,
     "name":"Weihnachtskonzert - Niederrheinisches Kammerorchester Moers (NKM)",
-    "market":"-",
+    "group":"-",
     "date":"13.12.2014",
     "hours":"19:30 Uhr",
     "20141124":"",
@@ -459,7 +459,7 @@ var data = [
   {
     "id":16,
     "name":"Drehorgelspieler Walter Stiller und das Panflöten Duo Christian Familiy",
-    "market":"x",
+    "group":"#",
     "date":"14.12.2014",
     "hours":"14:00-20:30 Uhr",
     "20141124":"",
@@ -524,7 +524,7 @@ var data = [
   {
     "id":18,
     "name":"Moers ganz weihnachtlich",
-    "market":"-",
+    "group":"-",
     "date":"14.12.2014",
     "hours":"15:00 Uhr",
     "20141124":"",
@@ -589,7 +589,7 @@ var data = [
   {
     "id":20,
     "name":"Weihnachtliches Festkonzert",
-    "market":"-",
+    "group":"-",
     "date":"14.12.2014",
     "hours":"17:00 Uhr",
     "20141124":"",
@@ -654,7 +654,7 @@ var data = [
   {
     "id":22,
     "name":"Weihnachtskonzert - Niederrheinisches Kammerorchester Moers (NKM)",
-    "market":"-",
+    "group":"-",
     "date":"14.12.2014",
     "hours":"19:30 Uhr",
     "20141124":"",
@@ -719,7 +719,7 @@ var data = [
   {
     "id":24,
     "name":"Posaunenchöre CVJM Kreisverband",
-    "market":"x",
+    "group":"#",
     "date":"15.12.2014",
     "hours":"18:30-19:30 Uhr",
     "20141124":"",
@@ -784,7 +784,7 @@ var data = [
   {
     "id":26,
     "name":"Bastelwerkstatt Weihnachtsmänner für Kinder ab 5 Jahren - Teil 2",
-    "market":"-",
+    "group":"-",
     "date":"16.12.2014",
     "hours":"15:00-16:30 Uhr",
     "20141124":"",
@@ -849,7 +849,7 @@ var data = [
   {
     "id":28,
     "name":"Knappenchor Rheinland",
-    "market":"x",
+    "group":"#",
     "date":"16.12.2014",
     "hours":"18:00-19:30 Uhr",
     "20141124":"",
@@ -914,7 +914,7 @@ var data = [
   {
     "id":30,
     "name":"AWO Chor Kamp- Lintfort und MIG Seniorenband",
-    "market":"x",
+    "group":"#",
     "date":"17.12.2014",
     "hours":"17:00-19:30 Uhr",
     "20141124":"",
@@ -979,7 +979,7 @@ var data = [
   {
     "id":32,
     "name":"Weihnachtsjazz mit Rod Mason & his hot five",
-    "market":"-",
+    "group":"-",
     "date":"17.12.2014",
     "hours":"20:00-23:00 Uhr",
     "20141124":"",
@@ -1044,7 +1044,7 @@ var data = [
   {
     "id":34,
     "name":"Valerie Scott - Queen of Soul",
-    "market":"x",
+    "group":"#",
     "date":"18.12.2014",
     "hours":"18:30-19:30 Uhr",
     "20141124":"",
@@ -1109,7 +1109,7 @@ var data = [
   {
     "id":36,
     "name":"Charles Dickens - Eine Weihnachtsgeschichte",
-    "market":"-",
+    "group":"-",
     "date":"18.12.2014",
     "hours":"19:30 Uhr",
     "20141124":"",
@@ -1174,7 +1174,7 @@ var data = [
   {
     "id":38,
     "name":"Sängerin Susanne Schubert",
-    "market":"x",
+    "group":"#",
     "date":"19.12.2014",
     "hours":"18:30-20:30 Uhr",
     "20141124":"",
@@ -1239,7 +1239,7 @@ var data = [
   {
     "id":40,
     "name":"Band Christus Gemeinde „Reflame“",
-    "market":"x",
+    "group":"#",
     "date":"20.12.2014",
     "hours":"17:00-18:15 Uhr",
     "20141124":"",
@@ -1304,7 +1304,7 @@ var data = [
   {
     "id":42,
     "name":"Weihnachtskonzert",
-    "market":"-",
+    "group":"-",
     "date":"20.12.2014",
     "hours":"19:00 Uhr",
     "20141124":"",
@@ -1369,7 +1369,7 @@ var data = [
   {
     "id":44,
     "name":"Dirk Elfgen",
-    "market":"x",
+    "group":"#",
     "date":"20.12.2014",
     "hours":"19:15-20:45 Uhr",
     "20141124":"",
@@ -1434,7 +1434,7 @@ var data = [
   {
     "id":46,
     "name":"Walter Stiller, Vierscher Ratpack und das Bigband Orchester Niederrhein",
-    "market":"x",
+    "group":"#",
     "date":"21.12.2014",
     "hours":"14:00-20:30 Uhr",
     "20141124":"",
@@ -1499,7 +1499,7 @@ var data = [
   {
     "id":48,
     "name":"Die schönsten Weihnachtlieder und Geschichten",
-    "market":"-",
+    "group":"-",
     "date":"21.12.2014",
     "hours":"17:00 Uhr",
     "20141124":"",
@@ -1564,7 +1564,7 @@ var data = [
   {
     "id":50,
     "name":"Traditionelles Weihnachtskonzert",
-    "market":"-",
+    "group":"-",
     "date":"23.12.2014",
     "hours":"17:00 Uhr",
     "20141124":"",
@@ -1629,7 +1629,7 @@ var data = [
   {
     "id":52,
     "name":"Musikverein Menzelen",
-    "market":"x",
+    "group":"#",
     "date":"23.12.2014",
     "hours":"18:00-19:00 Uhr",
     "20141124":"",
@@ -1694,7 +1694,7 @@ var data = [
   {
     "id":54,
     "name":"Wir warten auf´s Christkind !",
-    "market":"-",
+    "group":"-",
     "date":"23.12.2014",
     "hours":"22:00 Uhr",
     "20141124":"",
@@ -1759,7 +1759,7 @@ var data = [
   {
     "id":56,
     "name":"Christmas Party",
-    "market":"-",
+    "group":"-",
     "date":"25.12.2014",
     "hours":"22:00 Uhr",
     "20141124":"",
@@ -1824,7 +1824,7 @@ var data = [
   {
     "id":58,
     "name":"K.N.U.T (Knaller unterm Tannenbaum)",
-    "market":"-",
+    "group":"-",
     "date":"26.12.2014",
     "hours":"22:00 Uhr",
     "20141124":"",
@@ -1889,7 +1889,7 @@ var data = [
   {
     "id":60,
     "name":"Festliches Neujahrskonzert",
-    "market":"-",
+    "group":"-",
     "date":"01.01.2015",
     "hours":"17:00 Uhr",
     "20141124":"",
@@ -1954,7 +1954,7 @@ var data = [
   {
     "id":62,
     "name":"Weihnachtliche Chor- und Orgelmusik",
-    "market":"-",
+    "group":"-",
     "date":"04.01.2015",
     "hours":"17:00 Uhr",
     "20141124":"",
