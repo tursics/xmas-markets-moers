@@ -1,8 +1,8 @@
 {
-	"version": "1.0",
+	"version": "1.1",
 
 	"name": "Weihnachten in Moers",
-	"description": "Finde alle Weihnachtsmärkte in Moers: die großen, die kleinen, die bunten, die lebhaften, die besinnlichen und die Geheimtipps. Alle in einer App.",
+	"description": "Alle Veranstaltungen auf der Weihnachtsmarktbühne in Moers. Zusätzlich alle weiteren Veranstaltungen in der Stadt.",
 	"developer": {
 		"name": "Thomas Tursics",
 		"url": "http://www.tursics.de"
