@@ -197,7 +197,7 @@ function getNextMarketOpeningTime( obj)
 	var diffWeeks = parseInt(diffDays / 7);
 	var weekdays = new Array( "Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
 
-	if( maxOpen <= days) {
+	if( maxOpen < days) {
 		openingtime = 'Vorbei';
 	} else if( 0 == days) {
 		openingtime = 'Heute von ' + getOpeningTime( obj, days) + ' Uhr';
