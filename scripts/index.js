@@ -844,7 +844,7 @@ function callChangeFavorite( marketId)
 	document.querySelector('#buttonFav').innerHTML = '<i class="icon-heart-filled"></i>';
 
 	var obj = getObjFromID( marketId);
-	utils.status.show( obj.name + ' ist jetzt dein Lieblingsmarkt.');
+	utils.status.show( obj.name + ' ist jetzt dein Lieblingsevent.');
 }
 
 function fillListOneMarket()
