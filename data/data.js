@@ -973,7 +973,7 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
+    "todo":"mail",
     "copyright":"MoersMarketing GmbH"
   },
   {
@@ -1091,7 +1091,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/C70F9A959DDAC2D7C1257D950039035B?opendocument",
     "fee":"",
-    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Valerie Scott - Queen of Soul</p><p>Über Valerie Scott - die „Queen of soul“ - ist nicht viel mehr zu sagen. 2013 begeisterte Sie das Moerser Publikum während des Moerser Weihnachtsmarktes mit Ihren einfühlsamen Gospel-, Soul-und Popsongs. Bei Ihren gefühlvoll vorgetragen Liedern bekommt jeder Zuhörer Gänsehaut pur!</p>",
+    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Valerie Scott - Queen of Soul</p><p>Die Amerikanerin Valerie Scott ist eine vielseitige Sängerin, die bereits mit den allergrößten Künstlern wie Michael Jackson, Mick Jagger, Gloria Gaynor, Chaka Khan, Jennifer Lopez und den Edwin Hawkin Singers auf der Bühne gestanden hat. Auch für Galas der US-Präsidenten Ronald Reagan und Jimmy Carter sowie der deutschen Bundeskanzler Helmut Kohl, Gerhard Schröder und Angela Merkel wurde Valerie engagiert.</p><p>Bereits auf dem Weihnachtsmarkt 2013 gab es beim Auftritt dieser Künstlerin bei sämtlichen Zuhörern echtes Gänsehautfeeling. Vor einem begeisterten Publikum sang Valerie nicht nur bekannte Weihnachtslieder, sondern stellte die gesamte Breite Ihres musikalisches Könnens zur Show: ob Blues, Jazz, Rock, Pop, Gospel oder Soul – die anwesenden Zuhörer werden sofort in den Bann dieser charismatischen Sängerinnen gezogen!</p>",
     "locationname":"Kastellplatz",
     "city":"Moers",
     "street":"Kastell",
@@ -1103,8 +1103,8 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
-    "copyright":"MoersMarketing GmbH"
+    "todo":"ready",
+    "copyright":"Artist Eventainment"
   },
   {
     "id":36,
@@ -1233,7 +1233,7 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
+    "todo":"mail",
     "copyright":"MoersMarketing GmbH"
   },
   {
@@ -1286,7 +1286,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/6DD300E6227DC652C1257D9500390359?opendocument",
     "fee":"",
-    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Band Christus Gemeinde „Reflame“</p><p>Reflame ist eine bis zu 10köpfige Band, deren Musiker und Sänger sich aus unterschiedlichen Kirchengemeinden vom Niederrhein zusammensetzen. Das gemeinsame Ziel ist es, den Menschen in den Kirchen und Gemeinden durch moderne Pop- und Rockmusik Gott nahe zu bringen, durch die christlich geprägten Texte zum Nachdenken zu bewegen und den Glauben an Gott erlebbar zu praktizieren. Das Repertoire umfasst ein weites Spektrum von selbstgeschriebenen Liedern, soften Worship-Songs und rockigen Coverstücken.</p>",
+    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Band Christus Gemeinde „Reflame“</p><p>Reflame ist eine bis zu 10köpfige Band, deren Musiker und Sänger sich aus unterschiedlichen Kirchengemeinden vom Niederrhein zusammensetzen. Das gemeinsame Ziel ist es, den Menschen in den Kirchen und Gemeinden durch moderne Pop- und Rockmusik Gott nahe zu bringen, durch die christlich geprägten Texte zum Nachdenken zu bewegen und den Glauben an Gott erlebbar zu praktizieren.</p><p>Das Repertoire umfasst ein weites Spektrum von selbstgeschriebenen Liedern, soften Worship-Songs und rockigen Coverstücken.</p>",
     "locationname":"Kastellplatz",
     "city":"Moers",
     "street":"Kastell",
@@ -1298,8 +1298,8 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
-    "copyright":"MoersMarketing GmbH"
+    "todo":"ready",
+    "copyright":"media : grafixx"
   },
   {
     "id":42,
@@ -1416,7 +1416,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/3B0E4DBCB82BC9D9C1257D96003D6DDB?opendocument",
     "fee":"",
-    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Dirk Elfgen</p><p>Das „Wintererlebnis“ mit vielen deutschen und internationalen Weihnachtsliedern für kleine und große Weihnachtsfreunde – fröhlich, besinnlich und interaktiv - Dirk Elfgen´s Winter-Konzert wieder in Moers!</p><p>Mit Stimme, Gitarre sowie E-Piano, führt er dabei durch eine abwechslungsreiche, musikalische Weihnachtsshow und präsentiert traditionelle, aufgefrischte und moderne deutsche und internationale Weihnachtslieder. Dazu aber auch eigene unterhaltsame Winter- und Weihnachtssongs, durch die sein Programm eine ganz persönliche Note erhält. Und es kann durchaus auch passieren, dass sich so mancher plötzlich mitten im Geschehen und auf der Bühne wiederfindet - schließlich wird ja auch das Weihnachtsfest am liebsten gemeinsam gefeiert.</p>",
+    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Dirk Elfgen</p><p>Es ist jedes Jahr eines der Highlight im Bühnenprogramm auf dem Moerser Weihnachtsmarkt: Das Winterkonzert des Moerser Show-Allrounders Dirk Elfgen.</p><p>„Da sich dieser Auftritt in Moers in den letzten Jahren immer mehr zum Jahresabschlusstreffen von Sympathisanten, Fans, Freunden und Kollegen entwickelt hat, kommen in meiner Heimatstadt Moers selbst bei nicht so tollem Wetter immer viele Zuschauer“, so Elfgen. Wer also eine gute Sicht haben will, sollte schon etwas früher Richtung Bühne flanieren. Zur Belohnung verspricht Dirk Elfgen wieder ein abwechslungsreiches Konzerterlebnis mit zahlreichen Überraschungen: Ein musikalisches Programm mit 100% Weihnachtssongs quer durch alles Genres und für alle Altersstufen, von Bublé über Band Aid bis Elvis und … Elfgen. Dazu Piano, Ukulele & Gitarren und optische Effekte - von Schneegarantie über Winternebel bis hin zu Wunderkerzen und Bühnenfeuerwerk. Und selbstverständlich sind auch die elfgen-typischen Interaktionen für die ganze Familie dabei, so dass sich der eine oder andere vielleicht sogar spontan mit auf die Bühne darf - alles wie immer unter dem Motto ‘fröhlich - besinnlich - interaktiv‘.</p>",
     "locationname":"Kastellplatz",
     "city":"Moers",
     "street":"Kastell",
@@ -1428,8 +1428,8 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
-    "copyright":"MoersMarketing GmbH"
+    "todo":"ready",
+    "copyright":"Dirk Elfgen"
   },
   {
     "id":46,
@@ -1493,7 +1493,7 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
+    "todo":"mail",
     "copyright":"MoersMarketing GmbH"
   },
   {
@@ -1676,7 +1676,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/632FE78B643F2131C1257D9500390357?opendocument",
     "fee":"",
-    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Musikverein Menzelen</p><p>Blasmusik zum Weihnachtsmarkt-Finale - die original Menzelener Blasmusik spielt zum Weihnachtsmarkt-Finale in Moers auf. Im musikalischen Programm für den Weihnachtsmarkt wird der Musikverein Menzelen 1959 e.V. viele Werke unterschiedlicher Stilrichtungen mitbringen: „Oh, du fröhliche“ in rockigem Arrangement, „Macht hoch die Tür“, „Tochter Zion“ von Georg-Friedrich Händel “Mary’s Boy-Child, “Felice Navidad (spanisches Weihnachtslied), \"In der Weihnachtsbäckerei“ von Rolf Zuckowski, “Rudolph the red-nosed Reindeer, “We wish you a Merry Christmas\" und mehr...</p><p>Daneben erklingen zahlreiche bekannte deutsche Weihnachtslieder des mittlerweilen weit über den Niederrhein hinaus bekannten Blasorchesters. Die Band stellt eine junge, vielseitige, traditionsbewusste Formation dar, die mit dem eingängigen Sound sofort zum Mitsingen einlädt.</p>",
+    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Musikverein Menzelen</p><p>Blasmusik zum Weihnachtsmarkt-Finale - die original Menzelener Blasmusik spielt zum Weihnachtsmarkt-Finale in Moers auf. Im musikalischen Programm für den Weihnachtsmarkt wird der Musikverein Menzelen 1959 e.V. viele Werke unterschiedlicher Stilrichtungen mitbringen:</p><p>„Oh, du fröhliche“ in rockigem Arrangement, „Macht hoch die Tür“, „Tochter Zion“ von Georg-Friedrich Händel “Mary’s Boy-Child, “Felice Navidad (spanisches Weihnachtslied), \"In der Weihnachtsbäckerei“ von Rolf Zuckowski, “Rudolph the red-nosed Reindeer, “We wish you a Merry Christmas\" und mehr... Daneben erklingen zahlreiche bekannte deutsche Weihnachtslieder des mittlerweilen weit über den Niederrhein hinaus bekannten Blasorchesters.</p><p>Die Band stellt eine junge, vielseitige, traditionsbewusste Formation dar, die mit dem eingängigen Sound sofort zum Mitsingen einlädt.</p>",
     "locationname":"Kastellplatz",
     "city":"Moers",
     "street":"Kastell",
@@ -1688,8 +1688,8 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"",
-    "copyright":"MoersMarketing GmbH"
+    "todo":"ready",
+    "copyright":"Musikverein Menzelen"
   },
   {
     "id":54,
