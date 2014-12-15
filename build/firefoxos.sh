@@ -7,4 +7,4 @@ echo ""
 cd `dirname $0`
 cd ..
 
-zip -r ../xmas-markets.FFOS.zip *
+zip -r ../xmas-moers.FFOS.zip *
