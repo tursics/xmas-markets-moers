@@ -1156,7 +1156,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/F38D2C7DD000037CC1257D6D0029AFFF?opendocument",
     "fee":"12 Euro, ermäßigt 7 Euro",
-    "remarks":"<p>Eine szenische Lesung mit Carsten Bülow, ab 16 Jahren.</p><p>„Guten Abend, mein Name ist Charles Dickens“ so begrüßt Carsten Bülow seine Zuhörer. Im zeitgenössischen Kostüm stellt er den englischen Literaten dar, der seinem Publikum auf einer Vortragsreise einen kurzen Überblick über sein Leben gibt und erklärt, wie es zur berühmtesten Weihnachtsgeschichten der Welt überhaupt kam. Und dann trägt er die Geschichte rund um die Geister der Weihnacht, den geizigen Ebenezer Scrooge, Bob Cratchit und seine Familie und seinem Kompagnon Jacob Marley vor.</p><p>Seit sieben Jahren ist Carsten Bülow mit diesem Programm nun bundesweit unterwegs, in einigen Locations inzwischen regelmäßig.</p>",
+    "remarks":"<p>Eine szenische Lesung, Charles Dickens – Eine Weihnachtsgeschichte, mit Carsten Bülow</p><p>„Guten Abend, mein Name ist Charles Dickens“ so begrüßt Carsten Bülow seine Zuhörer. Im zeitgenössischen Kostüm stellt er den englischen Literaten dar, der seinem Publikum auf einer Vortragsreise einen kurzen Überblick über sein Leben gibt und erklärt, wie es zur berühmtesten Weihnachtsgeschichten der Welt überhaupt kam. Und dann trägt er die Geschichte rund um die Geister der Weihnacht, den geizigen Ebenezer Scrooge, Bob Cratchit und seine Familie und seinem Kompagnon Jacob Marley vor.</p><p>Seit sieben Jahren ist Carsten Bülow mit diesem Programm nun bundesweit unterwegs, in einigen Locations inzwischen regelmäßig.</p><p>Kartentelefon: 02841 8834 110, die Abendkasse öffnet eine Stunde vor der Vorstellung.</p>",
     "locationname":"Schloss",
     "city":"Moers",
     "street":"Kastell 9",
@@ -1168,8 +1168,8 @@ var data = [
     "organizerstreetaddress":"Kastell 6",
     "organizerzip":47441,
     "organizerurl":"http://www.schlosstheater-moers.de",
-    "todo":"mail",
-    "copyright":"Gellinger"
+    "todo":"ready",
+    "copyright":"Schlosstheater Moers"
   },
   {
     "id":38,
