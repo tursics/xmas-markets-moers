@@ -1481,7 +1481,7 @@ var data = [
     "20150104":"",
     "documenturl":"http://www.moers.de/C12572D6004DD690/0/9F1FEB812F3A2592C1257D9500390358?opendocument",
     "fee":"",
-    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Walter Stiller, Vierscher Ratpack und das Bigband Orchester Niederrhein</p><p>14 Uhr bis 18 Uhr Drehorgelspieler Walter Stiller auf dem Weihnachtsmarktgelände</p><p>Walter Stiller präsentiert mit seiner Drehorgel und Seifenblasen-Weitwurfmaschine Musik aus dem Bereich Volksmusik, Marschmusik, Schlager der 50er und 60er Jahre und natürlich Weihnachtslieder.</p><p>15 Uhr bis 18.30 Uhr Vierscher Ratpack in der Glühweinpyramide.</p><p>19 Uhr bis 20.30 Uhr Big Band Orchester Niederrhein</p><p>Das Big Band Orchester Niederrhein e.V. lädt mit schwungvoll-weihnachtlichen Big-Band-Arrangements wie z.B. „Frosty the snowman“ oder „Last Christmas“ zum Besuch des Moerser Weihnachtsmarktes ein. Typische Big-Band-Lieder werden die Besucher erfreuen und so wieder zum Mitklatschen verleiten und für im Swing wippende Füße sorgen.</p><p>Die klassischen Weihnachtslieder stimmen am letzten Tag des Weihnachtsmarktes auf ein besinnliches und fröhliches Weihnachtsfest ein.</p>",
+    "remarks":"<p>Der Moerser Weihnachtsmarkt bietet auch in diesem Jahr ein abwechslungsreiches Programm auf der Weihnachtsmarktbühne an. Heute mit: Walter Stiller, Vierscher Ratpack und das Bigband Orchester Niederrhein</p><p>14 Uhr bis 18 Uhr Drehorgelspieler Walter Stiller auf dem Weihnachtsmarktgelände</p><p>Walter Stiller präsentiert mit seiner Drehorgel und Seifenblasen-Weitwurfmaschine Musik aus dem Bereich Volksmusik, Marschmusik, Schlager der 50er und 60er Jahre und natürlich Weihnachtslieder.</p><p>15 Uhr bis 18.30 Uhr Vierscher Ratpack in der Glühweinpyramide.</p><p>Das Vierscher Ratpack präsentiert Ihnen Swingklassiker und bekannte Weihnachtslieder aus der goldenen Ära des Swing. Musik, Entertainment und Show im Stile des Originals um Frank Sinatra und Dean Martin.</p><p>19 Uhr bis 20.30 Uhr Big Band Orchester Niederrhein</p><p>Das Big Band Orchester Niederrhein e.V. lädt mit schwungvoll-weihnachtlichen Big-Band-Arrangements wie z.B. „Frosty the snowman“ oder „Last Christmas“ zum Besuch des Moerser Weihnachtsmarktes ein. Typische Big-Band-Lieder werden die Besucher erfreuen und so wieder zum Mitklatschen verleiten und für im Swing wippende Füße sorgen.</p><p>Die klassischen Weihnachtslieder stimmen am letzten Tag des Weihnachtsmarktes auf ein besinnliches und fröhliches Weihnachtsfest ein.</p>",
     "locationname":"Kastellplatz",
     "city":"Moers",
     "street":"Kastell",
@@ -1493,8 +1493,8 @@ var data = [
     "organizerstreetaddress":"Homberger Straße 4",
     "organizerzip":47441,
     "organizerurl":"http://www.moers-stadtportal.de",
-    "todo":"mail",
-    "copyright":"MoersMarketing GmbH"
+    "todo":"ready",
+    "copyright":"Roland Zentgraf"
   },
   {
     "id":48,
