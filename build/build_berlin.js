@@ -145,6 +145,14 @@ function parseOpeningHours(str) {
 				weekdays[weekdaysName.indexOf(date[1].substr(0, 2))] = date[3].replace(',', '');
 				weekdays[weekdaysName.indexOf(date[2])] = date[3].replace(',', '');
 				days.push(date[4] + ' ' + date[5]);
+			} else if ((date.length === 6) && ('Beginn:' === date[0]) && ('Uhr,' === date[2]) && ('Einlass:' === date[3])) {
+				// Beginn: 20.00 Uhr, Einlass: 19.00 Uhr
+				date[1] = date[1].replace('.', ':');
+				if (date[1].length < 3) {
+					// 10 Uhr
+					date[1] = twoDigits(parseInt(date[1], 10)) + ':00';
+				}
+				daily = date[1];
 			} else if ((date.length === 18) && ('täglich' === date[0]) && ('geöffnet' === date[1]) && ('ab' === date[2]) && ('Uhr;' === date[4])
 					   && ('donnerstags,' === date[5]) && ('freitags' === date[6]) && ('und' === date[7]) && ('samstags' === date[8]) && ('bis' === date[9]) && ('Uhr;' === date[11])
 					   && ('sonntags' === date[12]) && ('bis' === date[13]) && ('mittwochs' === date[14]) && ('bis' === date[15]) && ('Uhr' === date[17])) {
@@ -286,7 +294,14 @@ function buildOpeningHours(obj, hours) {
 	}
 
 	var currentDate = new Date(new Date(obj.begin).getFullYear() + "-11-01"),
-		endDate = new Date(obj.begin);
+		endDate = new Date(obj.begin),
+		fullYear = currentDate.getFullYear();
+
+	if ((new Date(obj.begin).getMonth()) === 0) {
+		// this date begins in January
+		--fullYear;
+		currentDate.setFullYear(fullYear);
+	}
 
 	for (currentDate; currentDate < endDate; currentDate.setDate(currentDate.getDate() + 1)) {
 		obj[prefix(currentDate)] = '';
@@ -301,7 +316,7 @@ function buildOpeningHours(obj, hours) {
 	}
 
 	currentDate = endDate;
-	endDate = new Date((new Date(obj.begin).getFullYear() + 1) + "-01-16");
+	endDate = new Date((fullYear + 1) + "-01-16");
 	for (currentDate; currentDate < endDate; currentDate.setDate(currentDate.getDate() + 1)) {
 		obj[prefix(currentDate)] = '';
 	}
@@ -367,6 +382,10 @@ function push_back(obj) {
 		console.log('- ' + obj.name.replace(/\r\n|\r|\n/g, ' ') + ' has no UUID');
 	}
 
+	if ((obj.lat === 0) && (obj.lng === 0)) {
+		console.log('- ' + obj.name.replace(/\r\n|\r|\n/g, ' ') + ' has no geo position');
+	}
+
 	dataVec.push(obj);
 }
 
@@ -386,7 +405,11 @@ function addOwnData() {
 		}
 
 		if (j >= dataVec.length) {
-			console.log('- missing old market ' + item.name);
+			if (item.todo === 'hide') {
+				console.log('- hide missing old market ' + item.name);
+			} else {
+				console.log('- missing old market ' + item.name);
+			}
 			push_back(item);
 		}
 	}
@@ -408,7 +431,7 @@ function getRefData(obj) {
 //			return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 //		}
 //		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-		return Math.floor((1 + Math.random()) * 0x10000).toString(10);
+		return parseInt(Math.floor((1 + Math.random()) * 0x10000).toString(10), 10);
 	}
 
 	var i = 0,
@@ -416,7 +439,7 @@ function getRefData(obj) {
 
 	for (i = 0; i < lastTimeDataVec.length; ++i) {
 //		if (lastTimeDataVec[i].id === id) {
-		if ((parseInt(lastTimeDataVec[i].lat * 10000, 10) === parseInt(obj.lat * 10000, 10)) && (parseInt(lastTimeDataVec[i].lng * 10000, 10) === parseInt(obj.lng * 10000, 10))) {
+		if ((obj.lat !== 0) && (obj.lng !== 0) && (parseInt(lastTimeDataVec[i].lat * 10000, 10) === parseInt(obj.lat * 10000, 10)) && (parseInt(lastTimeDataVec[i].lng * 10000, 10) === parseInt(obj.lng * 10000, 10))) {
 			return lastTimeDataVec[i];
 		}
 	}
@@ -495,7 +518,7 @@ function analyseDataLineBerlin(data) {
 //	obj.kind = ref.kind;
 	obj.fee = ref.fee;
 	obj.remarks = ref.remarks;
-	obj.todo = ref.todo;
+	obj.todo = ref.todo || 'new';
 //	obj.transit = ref.;
 
 //  obj.bemerkungen = data.bemerkungen;
@@ -519,6 +542,8 @@ function analyseDataLineMoers(data) {
 	ref = getRefData(obj);
 
 	obj.uuid = ref.uuid || null;
+	obj.lat = ref.lat || 0;
+	obj.lng = ref.lng || 0;
 	obj.district = '';
 	obj.name = data.title;
 	obj.location = data.locationname;
@@ -553,7 +578,7 @@ function analyseDataLineMoers(data) {
 	obj.twitter = ref.twitter || '';
 	obj.fee = ref.fee;
 	obj.remarks = ref.remarks;
-	obj.todo = ref.todo;
+	obj.todo = ref.todo || 'new';
 
 	push_back(obj);
 }
@@ -648,9 +673,11 @@ function analyseDataLineKrefeld(data) {
 	obj.lng = 0;
 //	buildGeo(obj, data.lat, data.lng);
 
-//	ref = getRefData(obj);
+	ref = getRefData(obj);
 
 	obj.uuid = ref.uuid || null;
+	obj.lat = ref.lat || 0;
+	obj.lng = ref.lng || 0;
 	obj.district = '';
 	obj.name = data.DocName;
 	obj.location = ref.location || '';
@@ -689,6 +716,11 @@ function analyseDataLineKrefeld(data) {
 		}
 	}
 
+	// to save time...
+	if (data.EventHighlight !== 'ja') {
+		return;
+	}
+
 	hours = parseOpeningHours(time);
 	testOpeningHours(obj, hours);
 	buildOpeningHours(obj, hours);
@@ -700,26 +732,12 @@ function analyseDataLineKrefeld(data) {
 	obj.facebook = ref.facebook || '';
 	obj.twitter = ref.twitter || '';
 	obj.fee = ref.fee || '';
-	obj.remarks = ref.remarks || data.kurztext;
+	obj.remarks = ref.remarks || data.Kurztext;
 	obj.todo = ref.todo || 'new';
 
-	if (data.EventHighlight === 'ja') {
-		console.log('>> ' + obj.name + ' << ' + obj.web);
-	}
-
-/*
-{ '@entryid': '1-AA548B8CADE383CEC1257FE60036C0AB',
-  '@position': '1',
-  '@siblings': 556,
-  EventSubTitle: '',
-  EventType: 'Kultur',
-  Kurztext: 'In den Ausstellungsräumen ist unter dem Titel "Das Abenteuer unserer Sammlung I" aus dem immensen Fundus der Kunstmuseen Krefeld eine ungewöhnliche Inszenierung der eigenen Sammlung zu sehen.',
-  Thumb: '' }
-
-      "EventType":
-      ["Kultur","Weihnachten","Weihnachtsmarkt"
-      ],
-*/
+//	if (data.EventHighlight === 'ja') {
+//		console.log('>> ' + obj.name + ' << ' + obj.web);
+//	}
 
 	push_back(obj);
 }
@@ -760,6 +778,25 @@ function saveAsJSFile(filepath, data) {
 function analyseJSON(savepath, json) {
 	'use strict';
 
+	function indexNames(data) {
+		var i, j, nr;
+
+		for (i = 0; i < data.length; ++i) {
+			nr = 1;
+			for (j = i + 1; j < data.length; ++j) {
+				if (data[i].title === data[j].title) {
+					++nr;
+					data[j].title += ' #' + nr;
+				}
+			}
+			if (nr !== 1) {
+				data[i].title += ' #1';
+			}
+		}
+
+		return data;
+	}
+
 	console.log('Analysing file');
 
 	var data = json.index,
@@ -771,6 +808,8 @@ function analyseJSON(savepath, json) {
 		}
 	} else if (typeof json.christmasevents !== 'undefined') {
 		data = json.christmasevents.entry;
+
+		data = indexNames(data);
 
 		for (i = 0; i < data.length; ++i) {
 			analyseDataLineMoers(data[i]);
@@ -929,57 +968,75 @@ function parseFolder(path, dataSource, dataURI, fileType, callback) {
 
 //-----------------------------------------------------------------------
 
-function buildBerlin(callback) {
+function buildBerlin(callback, parse) {
 	'use strict';
 
-	parseFolder('.', 'berlin', 'http://www.berlin.de/sen/wirtschaft/service/maerkte-feste/weihnachtsmaerkte/index.php/index/all.json?ipp=500', 'json', callback);
+	if (parse) {
+		parseFolder('.', 'berlin', 'http://www.berlin.de/sen/wirtschaft/service/maerkte-feste/weihnachtsmaerkte/index.php/index/all.json?ipp=500', 'json', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function buildBrandenburg(callback) {
+function buildBrandenburg(callback, parse) {
 	'use strict';
 
-	parseFolder('.', 'brandenburg', 'http://www.berlin.de/sen/wirtschaft/service/maerkte-feste/weihnachtsmaerkte/brandenburger-weihnachtsmaerkte/index.php/index.json?ipp=500', 'json', callback);
+	if (parse) {
+		parseFolder('.', 'brandenburg', 'http://www.berlin.de/sen/wirtschaft/service/maerkte-feste/weihnachtsmaerkte/brandenburger-weihnachtsmaerkte/index.php/index.json?ipp=500', 'json', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function buildMoers(callback) {
+function buildMoers(callback, parse) {
 	'use strict';
 
-	parseFolder('.', 'moers', 'https://www.moers.de/de/opendataxml/christmas-xml/', 'xml', callback);
+	if (parse) {
+		parseFolder('.', 'moers', 'https://www.moers.de/de/opendataxml/christmas-xml/', 'xml', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function buildKleve(callback) {
+function buildKleve(callback, parse) {
 	'use strict';
 
-//	parseFolder('.', 'kleve', 'https://www.offenesdatenportal.de/dataset/fc1b9c2c-cbd3-42e7-98ce-de8abd9aec11/resource/e3682fd9-4952-4356-b349-3b611e79c8f5/download/160427-marktverzeichnis-2016.csv', 'csv', callback);
-//	parseFolder('.', 'kleve', 'https://www.kleve.de/www/event.nsf/apijson.xsp/view-event-month?compact=false', 'json', callback);
-
-	callback();
+	if (parse) {
+//		parseFolder('.', 'kleve', 'https://www.offenesdatenportal.de/dataset/fc1b9c2c-cbd3-42e7-98ce-de8abd9aec11/resource/e3682fd9-4952-4356-b349-3b611e79c8f5/download/160427-marktverzeichnis-2016.csv', 'csv', callback);
+		parseFolder('.', 'kleve', 'https://www.kleve.de/www/event.nsf/apijson.xsp/view-event-month?compact=false', 'json', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function buildWesel(callback) {
+function buildWesel(callback, parse) {
 	'use strict';
 
-	parseFolder('.', 'wesel', 'https://www.wesel.de/de/system/-preview-xml/&src1=xml-veranstaltungen', 'xml', callback);
-
-//	callback();
+	if (parse) {
+		parseFolder('.', 'wesel', 'https://www.wesel.de/de/system/-preview-xml/&src1=xml-veranstaltungen', 'xml', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function buildKrefeld(callback) {
+function buildKrefeld(callback, parse) {
 	'use strict';
 
-	parseFolder('.', 'krefeld', 'https://www.krefeld.de/www/event.nsf/apijson.xsp/view-event-month?compact=false', 'json', callback);
-
-//	callback();
+	if (parse) {
+		parseFolder('.', 'krefeld', 'https://www.krefeld.de/www/event.nsf/apijson.xsp/view-event-month?compact=false', 'json', callback);
+	} else {
+		callback();
+	}
 }
 
 //-----------------------------------------------------------------------
@@ -999,12 +1056,12 @@ try {
 					buildWesel(function () {
 						console.log();
 						buildKrefeld(function () {
-						});
-					});
-				});
-			});
-		});
-	});
+						}, true);
+					}, false);
+				}, false);
+			}, true);
+		}, false);
+	}, false);
 } catch (e) {
 	console.error(e);
 }

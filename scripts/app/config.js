@@ -3,7 +3,8 @@
 
 //-----------------------------------------------------------------------
 
-define(['data/berlin', 'data/brandenburg', 'data/moers', 'data/krefeld'], function (dataBerlin, dataBrandenburg, dataMoers, dataKrefeld) {
+//define(['data/berlin', 'data/brandenburg', 'data/moers', 'data/krefeld'], function (dataBerlin, dataBrandenburg, dataMoers, dataKrefeld) {
+define(['data/moers', 'data/krefeld'], function (dataMoers, dataKrefeld) {
 	'use strict';
 
 	var firstDay = 4000000000000,
@@ -21,21 +22,21 @@ define(['data/berlin', 'data/brandenburg', 'data/moers', 'data/krefeld'], functi
 		if ('Berlin' === name) {
 			docTitle = 'Weihnachtsmärkte in Berlin';
 			header = 'Weihnachtsmärkte <em>in Berlin</em>';
-			markets = '<li><a href="#">"Berliner Weihnachtsmärkte"<br>CC-BY 3.0 DE<br>daten.berlin.de</a></li>';
-			attribution = '<li><a href="#">Charles Blume Vergnügungsbetrieb GmbH</a></li>';
+			markets = 'Berliner Weihnachtsmärkte<br>&nbsp;&nbsp;&nbsp;CC-BY 3.0 DE<br>&nbsp;&nbsp;&nbsp;daten.berlin.de';
+			attribution = '<a href="#">Charles Blume Vergnügungsbetrieb GmbH</a>';
 			teaserPath = 'art/berlin/teaser.jpg';
 		} else if ('Brandenburg' === name) {
-			markets = '<li><a href="#">"Brandenburger Weihnachtsmärkte"<br>CC-BY 3.0 DE<br>daten.berlin.de</a></li>';
+			markets = 'Brandenburger Weihnachtsmärkte<br>&nbsp;&nbsp;&nbsp;CC-BY 3.0 DE<br>&nbsp;&nbsp;&nbsp;daten.berlin.de';
 		} else if ('Moers' === name) {
-			docTitle = 'Weihnachten in Moers';
-			header = 'Weihnachten <em>in Moers</em>';
-			markets = '<li><a href="#">"Veranstaltungen zur Weihnachtszeit"<br>DL-DE-Zero-2.0<br>offenedaten.moers.de</a></li>';
-			attribution = '<li><a href="#">MoersMarketing GmbH</a></li>';
+			docTitle = 'Weihnachten in Moers und Krefeld';
+			header = 'Weihnachten <em>in Moers und Krefeld</em>';
+			markets = 'Veranstaltungen zur Weihnachtszeit<br>&nbsp;&nbsp;&nbsp;DL-DE-Zero-2.0<br>&nbsp;&nbsp;&nbsp;offenedaten.moers.de';
+			attribution = '<a href="#">MoersMarketing GmbH</a>';
 			teaserPath = 'art/moers/teaser.jpg';
 		} else if ('Wesel' === name) {
-			markets = '<li><a href="#">"Veranstaltungen in Wesel"<br>DL-DE-Zero-2.0<br>opendata.wesel.de</a></li>';
+			markets = 'Veranstaltungen in Wesel<br>&nbsp;&nbsp;&nbsp;DL-DE-Zero-2.0<br>&nbsp;&nbsp;&nbsp;opendata.wesel.de';
 		} else if ('Krefeld' === name) {
-			markets = '<li><a href="#">"Veranstaltungskalender der Stadt Krefeld"<br>DL-DE-Zero-2.0<br>offenesdatenportal.de/organization/krefeld</a></li>';
+			markets = 'Veranstaltungskalender der Stadt Krefeld<br>&nbsp;&nbsp;&nbsp;DL-DE-Zero-2.0<br>&nbsp;&nbsp;&nbsp;offenesdatenportal.de/organization/krefeld';
 		}
 
 		if (docTitle.length > 0) {
@@ -43,9 +44,10 @@ define(['data/berlin', 'data/brandenburg', 'data/moers', 'data/krefeld'], functi
 		}
 		if (header.length > 0) {
 			document.querySelector('#drawer h1').innerHTML = header;
+			document.querySelector('#sidebarTop .title').innerHTML = header;
 		}
-		document.querySelector('#index nav ul:nth-child(6)').innerHTML += markets;
-		document.querySelector('#index nav ul:nth-child(8)').innerHTML += attribution;
+		document.querySelector('#sidebarMiddle .markets').innerHTML += markets + '<br>';
+		document.querySelector('#sidebarMiddle .credits').innerHTML += attribution;
 	}
 
 	function addData(name, data) {
@@ -53,11 +55,13 @@ define(['data/berlin', 'data/brandenburg', 'data/moers', 'data/krefeld'], functi
 
 		for (market = 0; market < data.length; ++market) {
 			data[market].path = name.toLowerCase();
-			if (!isNaN(Date.parse(data[market].begin))) {
-				firstDay = Math.min(firstDay, Date.parse(data[market].begin));
-			}
-			if (!isNaN(Date.parse(data[market].end))) {
-				lastDay = Math.max(lastDay, Date.parse(data[market].end));
+			if (data[market].todo !== 'hide') {
+				if (!isNaN(Date.parse(data[market].begin))) {
+					firstDay = Math.min(firstDay, Date.parse(data[market].begin));
+				}
+				if (!isNaN(Date.parse(data[market].end))) {
+					lastDay = Math.max(lastDay, Date.parse(data[market].end));
+				}
 			}
 		}
 
