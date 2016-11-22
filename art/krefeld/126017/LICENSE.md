@@ -1,1 +1,1 @@
-Thommessen - Christmas Event Management
+Stadt Krefeld, Presse und Kommunikation, L. Strücken
