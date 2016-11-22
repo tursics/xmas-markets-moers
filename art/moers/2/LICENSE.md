@@ -1,1 +1,1 @@
-MoersMarketing GmbH
+{foo:"MoersMarketing GmbH"}
