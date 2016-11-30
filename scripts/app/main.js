@@ -15,14 +15,22 @@ function( config, viewAdventCalendar, viewMarketsToday, viewMarketsTomorrow, vie
 //	viewAdventCalendar.init();
 
 	document.querySelector('#btn-onemarket-back').addEventListener('click', function() {
-		window.scrollTo( 0, 0);
+		try {
+			window.scrollTo(0, 0);
+			document.body.scrollTop = 0;
+		} catch (err) {
+		}
 
 		document.querySelector('#onemarket').className = 'right';
 		document.querySelector('[data-position="current"]').className = 'current';
 	});
 	document.addEventListener( 'backbutton', function(e){
 		if( document.querySelector('[data-position="current"]').className != 'current'){
-			window.scrollTo( 0, 0);
+			try {
+				window.scrollTo(0, 0);
+				document.body.scrollTop = 0;
+			} catch (err) {
+			}
 
 			document.querySelector('#onemarket').className = 'right';
 			document.querySelector('[data-position="current"]').className = 'current';

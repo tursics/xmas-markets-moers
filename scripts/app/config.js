@@ -20,8 +20,8 @@ define(['data/moers', 'data/krefeld'], function (dataMoers, dataKrefeld) {
 			attribution = '';
 
 		if ('Berlin' === name) {
-			docTitle = 'Weihnachtsmärkte in Berlin';
-			header = 'Weihnachtsmärkte <em>in Berlin</em>';
+			docTitle = 'Weihnachtsmärkte in Berlin und Brandenburg';
+			header = 'Weihnachtsmärkte <em>in Berlin und Brandenburg</em>';
 			markets = 'Berliner Weihnachtsmärkte<br>&nbsp;&nbsp;&nbsp;CC-BY 3.0 DE<br>&nbsp;&nbsp;&nbsp;daten.berlin.de';
 			attribution = '<a href="#">Charles Blume Vergnügungsbetrieb GmbH</a>';
 			teaserPath = 'art/berlin/teaser.jpg';

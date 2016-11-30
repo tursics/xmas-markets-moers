@@ -32,7 +32,7 @@ define(['app/config', 'app/viewMarketsOne'], function (config, viewMarketsOne) {
 	// ·····························································
 	function getToday() {
 		var today = new Date();
-//		today.setDate(today.getDate() + 0);
+//		today.setDate(today.getDate() + 3);
 		return today;
 	}
 
@@ -75,6 +75,11 @@ define(['app/config', 'app/viewMarketsOne'], function (config, viewMarketsOne) {
 		showProgress: function () {
 //			window.scrollTo(0, 0);
 			document.querySelector('#marketlist').innerHTML = '<div class="center"><progress></progress></div>';
+		},
+
+		// ·························································
+		getToday: function () {
+			return getToday();
 		},
 
 		// ·························································
@@ -129,10 +134,25 @@ define(['app/config', 'app/viewMarketsOne'], function (config, viewMarketsOne) {
 		finishMarketList: function (txt) {
 			var objs, i;
 
+			document.querySelector('#marketlist').innerHTML = '';
+			try {
+				window.scrollTo(0, 0);
+				document.body.scrollTop = 0;
+				document.querySelector('#marketlist').scrollTop = 0;
+			} catch (err) {
+			}
 			document.querySelector('#marketlist').innerHTML = txt;
+
 			objs = document.querySelector('#marketlist').getElementsByTagName('li');
 			for (i = 0; i < objs.length; ++i) {
 				objs[i].addEventListener('click', onMarket);
+			}
+
+			try {
+				window.scrollTo(0, 0);
+				document.body.scrollTop = 0;
+				document.querySelector('#marketlist').scrollTop = 0;
+			} catch (err2) {
 			}
 		},
 
